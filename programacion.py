@@ -160,7 +160,7 @@ def download_file(url, path):
       gc.collect()
 
 def write_main_file(function):
-  data='def start():\n  import main.{nombre} as MAIN\n  version = "01000205"\n  MAIN.main()\n  \ndef boot():   \n  start()\n\nboot()\n'.format(nombre=function)
+  data='def start():\n  import main.{nombre} as MAIN\n  MAIN.main()\n  \ndef boot():   \n  start()\n\nboot()\n'.format(nombre=function)
   with open('main.py', 'w') as outfile:
     try:
       outfile.write(data)
